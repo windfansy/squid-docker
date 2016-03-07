@@ -1,4 +1,4 @@
-FROM index.alauda.cn/zjiekai/docker
+FROM index.alauda.cn/zjiekai/docker:v20151201.063700
 RUN apt-get update && apt-get install -y squid
 ADD hk1-squid.conf /root/hk1-squid.conf
 ADD sh1-squid.conf /root/sh1-squid.conf
