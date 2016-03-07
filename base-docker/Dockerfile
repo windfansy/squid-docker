@@ -1,6 +1,6 @@
 FROM index.alauda.cn/tutum/ubuntu:14.04
 
-RUN     apt-get -y -o Acquire::CompressionTypes::Order::=bz2 update && apt-get -y install \
+RUN     apt-get update && apt-get -y install \
           wget \
           curl \
           tmux \
@@ -15,9 +15,9 @@ RUN     apt-get -y install \
           software-properties-common
 
 RUN     add-apt-repository -y ppa:ubuntu-lxc/lxd-stable && \
-          apt-get -y -o Acquire::CompressionTypes::Order::=bz2 update
+          apt-get update
 
-RUN     apt-get -y -o Acquire::CompressionTypes::Order::=bz2 update && apt-get -y install \
+RUN     apt-get update && apt-get -y install \
           golang-go
 
 RUN     mkdir -p /root/gopath
