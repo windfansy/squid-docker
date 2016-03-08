@@ -7,3 +7,5 @@ elif [ "$SITE" = "hk" ]; then
 fi
 # run squid3
 squid3
+# check squid3 service state
+ps aux
