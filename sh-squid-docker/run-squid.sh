@@ -5,6 +5,8 @@ if [ "$SITE" = "sh" ]; then
 elif [ "$SITE" = "hk" ]; then
     cat /root/hk1-squid.conf > /etc/squid3/squid.conf
 fi
+# show /etc/squid3/conf
+cat /etc/squid3/squid.conf
 # run squid3
 squid3
 # check squid3 service state
