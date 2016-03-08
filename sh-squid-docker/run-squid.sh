@@ -8,6 +8,6 @@ fi
 # show /etc/squid3/conf
 cat /etc/squid3/squid.conf
 # run squid3
-squid3
+#exec /usr/sbin/squid3
 # check squid3 service state
-ps aux
+#ps aux
