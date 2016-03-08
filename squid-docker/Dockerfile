@@ -1,5 +1,5 @@
 FROM index.alauda.cn/windfansy/base-docker:20160307.1251
-RUN apt-get -o Acquire::CompressionTypes::Order::=bz2 update && apt-get install -y squid
+RUN apt-get update && apt-get install -y squid
 ADD * /root/
 ENV PEER=squid-docker-one-hk-windfansy.myalauda.cn
 ENV PORTNO=10230
