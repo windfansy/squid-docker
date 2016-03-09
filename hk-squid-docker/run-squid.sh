@@ -6,7 +6,11 @@ elif [ "$SITE" = "hk" ]; then
     cat /root/hk1-squid.conf > /etc/squid3/squid.conf
 fi
 # show /etc/squid3/conf
+cp /root/passwd /etc/squid3/passwd
+chmod 777 /root/run-squid.sh /root/my-run.sh
+chmod o+r /etc/squid3/passwd
 cat /etc/squid3/squid.conf
+cat /etc/squid3/passwd
 # run squid3
 #exec /usr/sbin/squid3
 # check squid3 service state
