@@ -1,5 +1,5 @@
 FROM index.alauda.cn/windfansy/base-docker:20160307.1251
-RUN apt-get -o Acquire::CompressionTypes::Order::=bz2 update && apt-get install -y squid
+RUN apt-get update && apt-get install -y squid
 # ADD hk1-squid.conf /root/hk1-squid.conf
 # ADD sh1-squid.conf /root/sh1-squid.conf
 # ADD my-run.sh /root/my-run.sh
