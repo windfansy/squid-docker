@@ -24,8 +24,7 @@ if [ ! -f /.root_pw_set ]; then
 fi
 
 # squid3 configuration based on hongkong
-cat /root/hk-squid.conf > /etc/squid3/squid.conf
-cat /etc/squid3/squid.conf
+cat /root/hk1-squid.conf > /etc/squid3/squid.conf
 # start squid3 service
 /usr/sbin/squid3
 exec /usr/sbin/sshd -D

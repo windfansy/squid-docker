@@ -22,10 +22,10 @@ fi
 if [ ! -f /.root_pw_set ]; then
         /set_root_pw.sh
 fi
-# squid3 configuration on Shanghai
-sed -e '3s/hostname'/"${PEER}"'/g' -e '3s/port/'"${PORTNO}"'/g' /root/sh-squid.conf > /etc/squid3/squid.conf
-# echo "${PORT}"
-# cat /etc/squid3/squid.conf
-# start squid3 service
+parentSquidConfig=$(cat /root/parentSquid.config) 
+configArray=( $parentSquidConfig )
+Squid_PEER=${configArray[0]}
+Squid_PORT=${configArray[1]}
+sed -e '3s/hostname'/"${Squid_PEER}"'/g' -e '3s/port/'"${Squid_PORT}"'/g' /root/sh1-squid.conf > /etc/squid3/squid.conf
 /usr/sbin/squid3
 exec /usr/sbin/sshd -D
