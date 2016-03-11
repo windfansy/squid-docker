@@ -1,5 +1,5 @@
 FROM index.alauda.cn/windfansy/base-docker:20160307.1251
-RUN apt-get update && apt-get install -y squid
+RUN apt-get update  && apt-get install -y squid
 # ADD hk1-squid.conf /root/hk1-squid.conf
 # ADD sh1-squid.conf /root/sh1-squid.conf
 # ADD my-run.sh /root/my-run.sh
@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y squid
 ADD * /root/
 # ENV SITE=sh
 # ENV SITE=hk
-ENV PEER=hk-squid-docker-oneImage-windfansy.myalauda.cn
-ENV PORTNO=10230
+ENV PEER=hk-squid-docker-oneimage-windfansy.myalauda.cn
+ENV PORTNO=12764
 # RUN chmod 777 /root/run-squid.sh /root/my-run.sh
 RUN sh /root/run-squid.sh
 # RUN echo 'exec /usr/sbin/squid3' >> /run.sh

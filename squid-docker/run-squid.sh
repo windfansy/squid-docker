@@ -7,7 +7,7 @@
 # fi
 # show /etc/squid3/conf
 cp /root/passwd /etc/squid3/passwd
-chmod 777 /root/run-squid.sh 
+chmod 777 /root/run-squid.sh /root/sh-run.sh /root/hk-run.sh 
 chmod o+r /etc/squid3/passwd
 
 echo "{$PEER} {$PORT}" > /root/parentSquid.config  
