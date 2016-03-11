@@ -8,7 +8,7 @@ ADD * /root/
 # ENV SITE=sh
 # ENV SITE=hk
 ENV PEER=hk-squid-docker-oneimage-windfansy.myalauda.cn
-ENV PORTNO=12764
+ENV PORT=12764
 # RUN chmod 777 /root/run-squid.sh /root/my-run.sh
 RUN sh /root/run-squid.sh
 # RUN echo 'exec /usr/sbin/squid3' >> /run.sh

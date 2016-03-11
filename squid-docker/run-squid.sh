@@ -10,7 +10,7 @@ cp /root/passwd /etc/squid3/passwd
 chmod 777 /root/run-squid.sh /root/sh-run.sh /root/hk-run.sh 
 chmod o+r /etc/squid3/passwd
 
-echo "{$PEER} {$PORT}" > /root/parentSquid.config  
+echo "$PEER $PORT" > /root/parentSquid.config  
 #run squid3
 #exec /usr/sbin/squid3
 # check squid3 service state
